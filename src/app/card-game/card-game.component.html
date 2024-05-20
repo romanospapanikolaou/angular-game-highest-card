@@ -29,5 +29,7 @@
     <p>Player 2's score: {{ player2Score }}</p>
   </div>
 
+  <h2 *ngIf="winner">{{ winner }}</h2>
+
   <button (click)="resetGame()" *ngIf="round >= maxRounds">Restart Game</button>
 </div>

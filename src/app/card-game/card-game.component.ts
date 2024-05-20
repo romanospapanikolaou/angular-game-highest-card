@@ -37,6 +37,7 @@ export class CardGameComponent implements OnInit {
   round: number = 0;
   maxRounds: number = 5;
   currentPlayer: number = 1;
+  winner: string | null = null;
 
   ngOnInit() {
     this.initializeDeck();
@@ -73,6 +74,9 @@ export class CardGameComponent implements OnInit {
       this.currentPlayer = 1;
       this.determineWinner();
       this.round++;
+      if (this.round >= this.maxRounds) {
+        this.determineWinnerOfGame();
+      }
     }
   }
 
@@ -100,6 +104,16 @@ export class CardGameComponent implements OnInit {
     }
   }
 
+  determineWinnerOfGame() {
+    if (this.player1Score > this.player2Score) {
+      this.winner = 'Player 1 wins the game!';
+    } else if (this.player1Score < this.player2Score) {
+      this.winner = 'Player 2 wins the game!';
+    } else {
+      this.winner = "It's a tie!";
+    }
+  }
+
   resetGame() {
     this.player1Card = '';
     this.player2Card = '';
@@ -108,6 +122,7 @@ export class CardGameComponent implements OnInit {
     this.player2Score = 0;
     this.round = 0;
     this.currentPlayer = 1;
+    this.winner = null; // Reset winner
     this.initializeDeck();
   }
 
