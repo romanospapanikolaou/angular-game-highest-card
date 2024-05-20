@@ -1,12 +1,17 @@
 .card-game {
+  height: 60vh;
   text-align: center;
   margin-top: 50px;
   font-family: Arial, sans-serif;
+  background-image: url("https://www.shutterstock.com/image-vector/poker-casino-table-background-green-600nw-2239114447.jpg"); /* Replace 'casino_table.jpg' with the path to your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
 }
 
 h1 {
   font-size: 2.5em;
-  color: #333;
+  color: #e74c3c; /* Red */
   margin-bottom: 20px;
 }
 
@@ -16,13 +21,13 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #27ae60; /* Green */
   color: white;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #219653; /* Dark green */
 }
 
 .card-container {
@@ -47,7 +52,11 @@ button:hover {
   font-size: 1.2em;
   color: #000;
   border: 1px solid #000;
-  background-image: linear-gradient(to bottom, #fff 50%, #dde0e2 50%);
+  background-image: linear-gradient(
+    to bottom,
+    #fff 50%,
+    #f3d9b0 50%
+  ); /* Gold */
   background-size: 100% 2px;
 }
 
@@ -81,7 +90,7 @@ button:hover {
 }
 
 h2 {
-  color: green;
+  color: #e74c3c; /* Red */
   margin-top: 20px;
 }
 
