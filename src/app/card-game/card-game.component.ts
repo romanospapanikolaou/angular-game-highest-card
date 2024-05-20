@@ -22,6 +22,12 @@ export class CardGameComponent implements OnInit {
     'K',
     'A',
   ];
+  suitSymbols: { [key: string]: string } = {
+    Hearts: '♥',
+    Diamonds: '♦',
+    Clubs: '♣',
+    Spades: '♠',
+  };
   deck: string[] = [];
   player1Card: string = '';
   player2Card: string = '';
@@ -103,5 +109,9 @@ export class CardGameComponent implements OnInit {
     this.round = 0;
     this.currentPlayer = 1;
     this.initializeDeck();
+  }
+
+  getSuitSymbol(suit: string): string {
+    return this.suitSymbols[suit];
   }
 }

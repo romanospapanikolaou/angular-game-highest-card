@@ -1,5 +1,5 @@
 <div class="card-game">
-  <h1>Card Game</h1>
+  <h1>Highest Card Wins</h1>
   <p>Round: {{ round }} / {{ maxRounds }}</p>
   <button
     (click)="drawCard()"
@@ -13,10 +13,12 @@
 
   <div class="card-container">
     <div class="card" *ngIf="player1Card">
-      Player 1's card: {{ player1Card }}
+      <span class="rank">{{ player1Card.split(" ")[0] }}</span>
+      <span class="suit">{{ getSuitSymbol(player1Card.split(" ")[2]) }}</span>
     </div>
     <div class="card" *ngIf="player2Card">
-      Player 2's card: {{ player2Card }}
+      <span class="rank">{{ player2Card.split(" ")[0] }}</span>
+      <span class="suit">{{ getSuitSymbol(player2Card.split(" ")[2]) }}</span>
     </div>
   </div>
 
