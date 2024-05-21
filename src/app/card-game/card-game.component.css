@@ -41,7 +41,7 @@ button {
 }
 
 button:hover {
-  background-color: #219653; /* Dark green */
+  background-color: #18cc66;
 }
 
 .card-container {
@@ -104,7 +104,7 @@ button:hover {
 }
 
 h2 {
-  color: #e74c3c; /* Red */
+  color: red;
   margin-top: 20px;
 }
 
