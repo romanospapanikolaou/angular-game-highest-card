@@ -1,5 +1,5 @@
 .card-game {
-  height: 65vh;
+  height: 70vh;
   text-align: center;
   margin-top: 50px;
   font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
   background-image: url("https://www.shutterstock.com/image-vector/poker-casino-table-background-green-600nw-2239114447.jpg"); /* Replace 'casino_table.jpg' with the path to your background image */
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(8px); /* Add a blur effect with a 10px radius */
+  filter: blur(10px); /* Add a blur effect with a 10px radius */
   z-index: -1; /* Ensure the blurred background is behind other content */
 }
 
